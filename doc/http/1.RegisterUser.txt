@@ -1,0 +1,11 @@
+POST http://localhost:54627/api/Account/Register HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:54627
+Content-Length: 92
+Content-Type: application/json; charset=utf-8
+
+{
+  "userName": "Taiseer",
+  "password": "SuperPass",
+  "confirmPassword": "SuperPass"
+}
