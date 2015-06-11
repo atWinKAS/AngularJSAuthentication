@@ -1,0 +1,5 @@
+GET http://localhost:54627/api/Orders HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:54627
+Authorization: Bearer W6UwoUJkWboZEbpz7oXzOYmJNzG3UqyBBEB32VDETXkJLqvJJt-ksF6zb49OXyDmkic0_b0r_aaQbkcafXTOddnzVBaCuceLgvHIWFX6MsdMfrP8jA7t2TVmr3_hgjAO8T0l37jOlVQOCqNeI6kcVijUVLH3s47iMVtP-i0FMpciulyqhvfsNhAmvrHs8dZok6cMMQMHlv8G3PjIIUF3k14mug8sGtGtL08VyLeW2LU
+

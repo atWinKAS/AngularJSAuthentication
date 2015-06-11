@@ -1,0 +1,7 @@
+POST http://localhost:54627/token HTTP/1.1
+User-Agent: Fiddler
+Host: localhost:54627
+Content-Type: x-www-form-urlencoded
+Content-Length: 55
+
+grant_type=password&username=Taiseer&password=SuperPass
