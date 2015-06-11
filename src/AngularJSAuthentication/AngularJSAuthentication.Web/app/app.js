@@ -1,4 +1,5 @@
-﻿var app = angular.module('AngularAuthApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar']);
+﻿
+var app = angular.module('AngularAuthApp', ['ngRoute', 'LocalStorageModule', 'angular-loading-bar']);
 
 app.config(function ($routeProvider) {
 
@@ -22,7 +23,30 @@ app.config(function ($routeProvider) {
         templateUrl: "/app/views/orders.html"
     });
 
+    $routeProvider.when("/refresh", {
+        controller: "refreshController",
+        templateUrl: "/app/views/refresh.html"
+    });
+
+    $routeProvider.when("/tokens", {
+        controller: "tokensManagerController",
+        templateUrl: "/app/views/tokens.html"
+    });
+
+    $routeProvider.when("/associate", {
+        controller: "associateController",
+        templateUrl: "/app/views/associate.html"
+    });
+
     $routeProvider.otherwise({ redirectTo: "/home" });
+
+});
+
+var serviceBase = 'http://localhost:26264/';
+//var serviceBase = 'http://ngauthenticationapi.azurewebsites.net/';
+app.constant('ngAuthSettings', {
+    apiServiceBaseUri: serviceBase,
+    clientId: 'ngAuthApp'
 });
 
 app.config(function ($httpProvider) {
@@ -32,3 +56,5 @@ app.config(function ($httpProvider) {
 app.run(['authService', function (authService) {
     authService.fillAuthData();
 }]);
+
+
