@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Web.Http;
 
 namespace AngularJSAuthentication.API.Controllers
@@ -14,9 +15,18 @@ namespace AngularJSAuthentication.API.Controllers
         [Route("")]
         public IHttpActionResult Get()
         {
+            //ClaimsPrincipal principal = Request.GetRequestContext().Principal as ClaimsPrincipal;
+
+            //var Name = ClaimsPrincipal.Current.Identity.Name;
+            //var Name1 = User.Identity.Name;
+
+            //var userName = principal.Claims.Where(c => c.Type == "sub").Single().Value;
+
             return Ok(Order.CreateOrders());
         }
+
     }
+
 
     #region Helpers
 
@@ -26,6 +36,7 @@ namespace AngularJSAuthentication.API.Controllers
         public string CustomerName { get; set; }
         public string ShipperCity { get; set; }
         public Boolean IsShipped { get; set; }
+
 
         public static List<Order> CreateOrders()
         {

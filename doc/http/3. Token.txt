@@ -4,4 +4,4 @@ Host: localhost:54627
 Content-Type: x-www-form-urlencoded
 Content-Length: 55
 
-grant_type=password&username=Taiseer&password=SuperPass
+grant_type=password&username=Taiseer&password=SuperPass&client_id=ngAuthApp
